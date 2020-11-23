@@ -15,10 +15,10 @@
 
 ```ts
 interface Employee {
-  id: string;
-  name: string;
-  department: string;
-  imgUrl: string;
+    id: string;
+    name: string;
+    department: string;
+    imgUrl: string;
 }
 ```
 
@@ -35,7 +35,11 @@ interface Employee {
 
 ## Note
 
-- All slugs like `:id` can be replaced with `:q`.
+- All slugs like `:id` can be replaced with `:q`, which will then try to match the query with any property.
+
+### Examples
+
+- `/api/employees?q=reinsta` will return the employee `Alois Reinstadler`, since `reinsta` matched `Reinstadler`.
 
 ## DEMO
 
