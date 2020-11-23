@@ -1,15 +1,16 @@
 # API Documentation
 
-## Endpoints
-
-### Base Url - `/api`
+## Endpoints - (Base Url - `/api`)
 
 ### Employees
 
-- `GET /employees`
-- `GET /employees/:id`
-- `POST /employees/:id`
-- `DELETE /employees/:id`
+#### Methods
+
+- `GET    /employees` - Returns all employees
+- `GET    /employees/:prop` - Returns all employees
+- `POST   /employees/:id` - Returns all employees
+- `PUT    /employees/:id` - Returns all employees
+- `DELETE /employees/:id` - Deletes an employee based on `:id`.
 
 #### Model
 
