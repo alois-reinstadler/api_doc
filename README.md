@@ -1,118 +1,37 @@
-# StackOverflowClone
+# API Documentation
 
-[![Version](https://img.shields.io/static/v1?label=version&message=2.0.0&color=blue)](https://shields.io/)
-[![NPM](https://img.shields.io/static/v1?label=npm&message=6.8.5&color=blue)](https://shields.io/)
-[![NODE](https://img.shields.io/static/v1?label=node&message=10.12.8&color=success)](https://shields.io/)
-[![MYSQL](https://img.shields.io/static/v1?label=mysql&message=8.0.10&color=blueviolet)](https://shields.io/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://shields.io/)
+## Endpoints
 
-As the name suggests, this project is a clone of a famous Q/A website for professional and enthusiast programmers built solely by me using a completely different stack.
+### Base Url - `/api`
 
-**:new: New Update:** _newly added features are mentined in issue([#15](https://github.com/Mayank0255/Stack-Overflow-Clone/issues/15))_
-
-## Table of Contents
-
-- [My Tech Stack](#my-tech-stack-mern)
-  - [Front-end](#front-end)
-  - [Back-end](#back-end)
-  - [Original Tech Stack](#original-tech-stack)
-- [Guidelines to setup](#guidelines-to-setup)
-- [API Endpoints](#api-endpoints)
-  - [Base Url](#base-url---httplocalhost5000api)
-  - [Users](#users)
-  - [Posts](#posts)
-  - [Answers](#answers)
-  - [Comments](#comments)
-  - [Tags](#tags)
-- [Demo](#demo)
-  - [Video](#video---watch-the-video)
-  - [Images](#images)
-- [Future Scope](#future-scope)
-
-## My Tech Stack (MERN)
-
-#### Front-end
-
-- Front-end Framework: `React.js (with Redux)`
-- Styling: `SASS` and `BOOTSTRAP`
-
-#### Back-end
-
-- For handling server requests: `Node.js with Express.js Framework`
-- As Database: `MySQL`
-- API tested using: `POSTMAN`
-
-### Original Tech Stack
-
-- For handling server requests: `C#`
-- As Database: `Microsoft SQL Server`
-- `.NET` as well
-
-## Guidelines to setup
-
-1.  Create a `.env` file and the format should be as given in `.env.example`.
-2.  Run these commands then -
-
-    ```
-    npm run installDep (To install all the dependencies)
-
-    npm run auditDep (Run this to audit fix all the vulnerabilities)
-    ```
-
-3.  Run `databaseConfig.sql` file in the mysql client
-    ```
-    source <file path>/databaseConfig.sql
-    ```
-4.  _(Optional)_ Run `seed.sql` file in the mysql client for seed data
-    ```
-    source <file path>/seed.sql
-    ```
-    _Note: Change the database name in `databaseConfig.sql` & `seed.sql` under `USE` command_
-5.  Start the servers
-    ```
-    Option 1 (for running both the servers simultaneously):
-        npm run dev
-
-        Option 2 (for running both the servers individually):
-
-        npm run server (for backend server only)
-
-        npm run client (for frontend server only)
-        ```
-    _NOTE: Might take sometime to start as there will be 2 servers running._
-
-## API Endpoints
-
-#### Base Url - `/api`
-
-#### Employees
+### Employees
 
 - `GET /employees`
 - `GET /employees/:id`
 - `POST /employees/:id`
 - `DELETE /employees/:id`
 
-#### Auth
+#### Model
+
+```ts
+interface Employee {
+  id: string;
+  name: string;
+  department: string;
+  imgUrl: string;
+}
+```
+
+### Auth
 
 - `GET /auth`
 - `POST /auth`
 
-#### Blog
+### Blog
 
 - `GET /blog/:id`
 - `POST /blog/:id`
 - `DELETE /blog/:id`
-
-#### Comments
-
-- `GET /posts/comments/:id`
-- `POST /posts/comments/:id`
-- `DELETE /posts/comments/:id`
-
-#### Tags
-
-- `GET /tags`
-- `GET /tags/:tag_name`
 
 ## Note
 
