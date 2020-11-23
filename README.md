@@ -83,30 +83,25 @@ As the name suggests, this project is a clone of a famous Q/A website for profes
 
 ## API Endpoints
 
-#### Base Url - `http://localhost:5000/api`
+#### Base Url - `/api`
 
-#### Users
+#### Employees
+
+- `GET /employees`
+- `GET /employees/:id`
+- `POST /employees/:id`
+- `DELETE /employees/:id`
+
+#### Auth
 
 - `GET /auth`
 - `POST /auth`
-- `POST /users/:id`
-- `GET /users`
-- `GET /users/:id`
 
-#### Posts
+#### Blog
 
-- `GET /posts`
-- `GET /posts/top`
-- `GET /posts/tag/:tagname`
-- `GET /posts/:id`
-- `POST /posts/`
-- `DELETE /posts/:id`
-
-#### Answers
-
-- `GET /posts/answers/:id`
-- `POST /posts/answers/:id`
-- `DELETE /posts/answers/:id`
+- `GET /blog/:id`
+- `POST /blog/:id`
+- `DELETE /blog/:id`
 
 #### Comments
 
@@ -119,10 +114,9 @@ As the name suggests, this project is a clone of a famous Q/A website for profes
 - `GET /tags`
 - `GET /tags/:tag_name`
 
-## Future Scope
+## Note
 
-- Setup `Sequelize` with `MySQL` in the `API`.
-- Deploy the database to cloud, API, and client-side.
+- All slugs like `:id` can be replaced with `:q`.
 
 ## DEMO
 
